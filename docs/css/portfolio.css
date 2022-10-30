@@ -6,12 +6,6 @@
     margin: 0;
     padding: 0;
     user-select: none;
-<<<<<<< Updated upstream
-   
-=======
-    max-width: 100%;
-
->>>>>>> Stashed changes
 } 
 
 html {
@@ -82,15 +76,11 @@ a:hover {
 .navbar a { 
     color: white;
     text-decoration: none;
-<<<<<<< Updated upstream
-    font-size: 3vw; 
-=======
-    font-size: 2vw; 
->>>>>>> Stashed changes
+    font-size: 1.5vw; 
     padding: 10px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-right: 10px;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    margin-right: 1vw;
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
@@ -120,11 +110,7 @@ a:hover {
 }
 
 #Home p {
-<<<<<<< Updated upstream
-    font-size: 1.2vw;
-=======
     font-size: larger;
->>>>>>> Stashed changes
     position: absolute;
     top: 50%;
     left: 50%;
@@ -137,6 +123,7 @@ a:hover {
 }
 
 /*Slideshow */
+
 .slideshow-container {
     
     position: relative;
@@ -330,23 +317,6 @@ footer {
   
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
-
-/* On screens 576px and smaller images will be 100px tall and centered vertically in the column */
-@media screen and (max-width: 576px) {
-    img {
-        /*
-        height: 100px;
-        margin-top: 150px;
-        */
-    }
-}
-/* Screens 576px and smaller will display navbar links equally distributed */
-@media screen and (max-width: 576px) {
-    .Navbar a{
-        width: 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size: 12px;
-    }
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
