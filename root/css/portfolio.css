@@ -1,115 +1,174 @@
 /* General */
 * { 
-    box-sizing : border-box;
-    font-weight : lighter; 
-    font-family : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    font-weight: lighter; 
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    user-select: none;
 } 
 
-body {
-    margin : 0%;
+html {
+    scroll-behavior: smooth;
+    position: relative;
+    scroll-padding-top: 60px; /* height of the nav bar */
 }
 
+/* Headers */
 h1 {
-    text-decoration : underline;
-    text-decoration-thickness : 1px;
-    text-align : center; 
-    margin-top : 10px;
-    color : black; 
-    font-weight : 350;
+    text-decoration: underline;
+    text-align: center; 
+    color: black; 
+    font-weight: 400;
 }
 
+/* General text */
 p {
-    text-align : justify;
-    font-size : 18px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom : 20px;
-    padding-top : 10px;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
 }
 
+/* For centering specific elements */
 .center {
-    text-align : center; 
+    text-align: center; 
 }
 
+/* Quote */
+q {
+    font-style: italic;
+}
+
+/* General Image */
+img {
+    max-width: 100%;
+    height: 340px; 
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/* Hyperlinks */
 a {
     color: blue;
+    text-decoration: underline;
 }
 
-q {
-    font-style : italic;
-}
-
-img {
-    border-radius : 20px;
-    max-width : 100%;
-    height : 340px; 
-    display : block;
-    margin-top : 20px;
-    margin-left : auto; 
-    margin-right : auto;
+a:hover {
+    cursor: pointer;
 }
 
 /* Navbar */
 
 .navbar {
-    overflow : hidden; 
-    background-color : grey; 
-    position : fixed;
-    top : 0; 
-    width : 100%; 
-    height : 7%;
-    z-index : 1;
-    text-align : center;
-    padding : 12px;
+    overflow: hidden; 
+    background-color: black; 
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    z-index: 1;
+    text-align: center;
 }    
+
+/* Navbar links */
 
 .navbar a { 
     color: white;
-    text-decoration : none;
-    font-size : 24px; 
-    text-align : center;
-    margin : 5px;
-    padding : 7px;
+    text-decoration: none;
+    font-size: 24px; 
+    padding: 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 100;
+
 }
 
 .navbar a:hover {
-    background-color : lightgrey; 
-    color : black; 
-    border-radius : 15px;
+    background-color: whitesmoke; 
+    color: black; 
+    border-radius: 20px;
+    font-weight: 100;
+
 }
 
-/* Home */
+/* Home Section */
 
-#Home_Image {
-    width : 100%;
-    height : auto;
-    border-radius : 0px;
-    margin-bottom : 50px;
+#Home img {
+    height: auto;
 }
 
 #Home {
-    position : relative;
-    text-align : center;
-    color : white;
-    top : -10px;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
-#Home_Text {
-    font-size : larger;
-    position : absolute;
-    top : 35%;
-    left : 50%;
+#Home p {
+    font-size: large;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
   }
 
-/* Content */
+/*Slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    background-color: black;
+    padding: 10px;
+    border-radius: 30px;
+}
+  
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    height: relative;
+    border-radius: 30px;
+}
+
+/* Slideshow captions */
+.slides-text {
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: auto;
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+/*  Content */
 
 .Column_1 {
-    float : left;
-    width : 50%; 
-    padding : 10px;
-    height : 400px; 
-    background-color : whitesmoke; 
+    float: left;
+    width: 50%; 
+    padding: 10px;
+    height: 400px; 
+    background-color: whitesmoke; 
 }
 
 .Column_2 {
@@ -117,110 +176,159 @@ img {
     width: 50%;
     padding: 10px;
     height: 400px;
-    background-color : #b86948;
-}
-
-.Row {
-    padding-bottom : 50px;
 }
 
 .Row:after {
-	content : ""; 
-	display : table; 
-	clear : both; 
+	content: ""; 
+    
+	display: table; 
+	clear: both; 
 }
 
 /* Contact Form */
-
-form {
-    border-radius : 10px;
-    padding : 25px; 
-    background-color : white; 
+.form-popup {
+    z-index: 8; 
+    display: none; 
+    position: fixed; 
+    bottom: .5vw; 
+    right: .5vw; 
 }
 
-input[type=text] {
-    width : 100%; 
-    padding : 12px; 
-    border : 1px solid lightgrey; 
-    border-radius : 4px; 
-    box-sizing : border-box; 
-    margin-top : 6px; 
-    margin-bottom : 16px;
-    resize : vertical;
+.form-container {
+    max-width: 49vw;
+    border-radius: 10px;
+    padding: 25px; 
+    background-color: white; 
 }
 
-input[type=text]:hover {
+
+/* Input fields */
+.form-container input[type=text] {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid lightgrey; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+/* General button */
+button {
+    letter-spacing: .1vw;
+    font-size: 1.5vw; 
+    font-weight: bold; 
+    padding: 1.5vw; 
+    cursor: pointer; 
+    width: 100%; 
+    height: auto;
+}
+
+/* Hover effects for contact and submit buttons */
+button:hover, .form-container .btn:hover {
+    color: white; 
+    background-color: black; 
+    transition-duration: 1s; 
+    -webkit-transition-duration: 1s; 
+    border-color: silver; 
+}
+
+/* Submit button */
+.form-container .btn {
+    background-color: white; 
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh; 
+}
+
+
+/* Close button */
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+/* Styling for close button on hover */
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
     box-shadow : 0 0 5px black inset; 
+
 }
 
-input[type=submit] {
-    background-color : #4C4E52; 
-    color : white; 
-    padding : 12px 20px; 
-    border : none;
-    border-radius : 4px; 
-    cursor : pointer; 
-    display : block; 
-    margin-left : auto; 
-    margin-right : auto;
+/*Contact form button */
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw; 
+    width: 25vw; 
+    background-color: white; 
+    color: black;
+    border: solid black; 
+    cursor: pointer; 
+    -webkit-animation: movePopup 3s; /* Animation for 5 seconds for Safari 4.0-8.0 */
+    animation: movePopup 3s; /* Animation set for 3 seconds */
 }
 
-input[type=submit]:hover {
-    background-color : rgb(213, 213, 213);
-    color : black;
+/* Moves the button from off the right side of the screen to its fixed location on the viewport */
+@keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw;} 
+    to {right: 1.75vw;}
 }
 
 /* Footer */
-
 footer {
-    margin-top : 10%;
-    padding-top : 5%;
+    margin-top: 20%;
+    margin-bottom: 2%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 /* On screens 576px and smaller images will be 100px tall and centered vertically in the column */
 @media screen and (max-width: 576px) {
     img {
-        height : 100px;
-        margin-top : 150px;
+        height: 100px;
+        margin-top: 150px;
     }
 }
 /* Screens 576px and smaller will display navbar links equally distributed */
 @media screen and (max-width: 576px) {
     .Navbar a{
-        width : 25%; /* This makes each link take up 1/4 of the navbar */
-        font-size : 12px;
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
     }
 }
-
-/* Screens that are 576px and smaller will not display the background media */
-@media screen and (max-width: 576px) {
-    #Home {
-        display : none;
-    }
-}
-
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
 @media screen and (max-width: 576px) {
     .Column_1 {
-        overflow : auto;
+        overflow: auto;
     }
 }
 
-/* Scrollbar */
 
-::-webkit-scrollbar {
-    width : 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background : #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background : #888;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background : #555;
-  }
