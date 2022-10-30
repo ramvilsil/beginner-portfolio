@@ -75,15 +75,11 @@ a:hover {
 .navbar a { 
     color: white;
     text-decoration: none;
-<<<<<<< Updated upstream
-    font-size: 1.5vw; 
-=======
     font-size: 24px; 
->>>>>>> Stashed changes
     padding: 10px;
-    margin-top: 0.5vh;
-    margin-bottom: 0.5vh;
-    margin-right: 1vw;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 10px;
     line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
@@ -112,11 +108,7 @@ a:hover {
 }
 
 #Home p {
-<<<<<<< Updated upstream
-    font-size: larger;
-=======
     font-size: large;
->>>>>>> Stashed changes
     position: absolute;
     top: 50%;
     left: 50%;
@@ -127,7 +119,6 @@ a:hover {
   }
 
 /*Slideshow */
-
 .slideshow-container {
     max-width: 1000px;
     position: relative;
@@ -318,8 +309,6 @@ footer {
     background: #555;
 }
 
-<<<<<<< Updated upstream
-=======
 /* On screens 576px and smaller images will be 100px tall and centered vertically in the column */
 @media screen and (max-width: 576px) {
     img {
@@ -335,7 +324,6 @@ footer {
     }
 }
 
->>>>>>> Stashed changes
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
 @media screen and (max-width: 576px) {
     .Column_1 {
