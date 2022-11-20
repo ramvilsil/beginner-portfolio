@@ -1,7 +1,8 @@
 # My Personal Portfolio Website
 
+
 ### About
-My first portfolio website, built from scratch.
+My first portfolio website, built from scratch. Deployed with GitHub pages.
 
 
 ### Tools & Technologies
@@ -15,3 +16,8 @@ My first portfolio website, built from scratch.
 - Index HTML Page
 - CSS Styling Page
 - JavaScript Scripting Page
+
+<br>
+
+
+![image](https://user-images.githubusercontent.com/115331883/202902087-05caaf50-7096-41a2-a26e-2157421f1c15.png)
