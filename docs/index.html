@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Ramon's Portfolio</title>
+        <title>Ramon | Full-Stack Web Developer</title>
         
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="css/portfolio.css">
@@ -37,42 +37,49 @@
         <div class="navbar">
             
             <a href="#Home">Home</a>
-            <a href="#About">About</a>
+            <a href="#About">About Me</a>
             <a href="#GitHub">GitHub</a>
-
         </div>
 
         <!--End of Navbar-->
 
-        <!--Home Section-->
+    
+        <!--About section-->
 
-        <div id="Home">
+        <div class="Row" id="Home">
 
-            <img src="images/pexels-markus_spiske-source_code.jpg">
+            <!--About Section Slideshow, left column-->
 
+            <div class="Column_2">
 
-                <p class="center">
-                    Welcome to my portfolio website.
-                    <br>
-                    ______________________________________________
-                    <br>
-                    <br>
-                    <q>
-                        We cannot solve our problems with the same thinking we used when we created them.
-                    </q>    
-                    <br> -Albert Einstein
-                    <br>
-                    ___________________________________
-                    <br>
-                    <br> Learn more about my background and experience below. 
-                    <br>
-                    <br> Thanks for visiting!
+                <br>
+                <br>
+                <p class="center" style="font-size: 36pt;">
+
+                    Welcome to my digital gallery, where I showcase my programming projects and progress.
                     
                 </p>
 
+                
+
+            </div>
+
+            <!--About Section Text, right column-->
+
+            <div class="Column_1">
+
+                <img src="images/pexels-markus_spiske-source_code.jpg">
+
+                
+                
+            </div>
+
         </div>
-        
-        <!--End of Slideshow Section-->
+
+        <!--End of About Section-->
+
+
+
 
         <!--About section-->
 
@@ -98,8 +105,13 @@
                         </div>
                     
                         <div class="mySlides fade">
-                            <img src="images/C_Sharp_and_Dot_NET.png">
-                            <div class="slides-text">C# & .NET</div>
+                            <img src="images/net-asap-logo-3-01.png">
+                            <div class="slides-text">.NET Core Framework</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="images/CSharplogo.png">
+                            <div class="slides-text">C#</div>
                         </div>
         
                     </div>
@@ -111,18 +123,24 @@
             <!--About Section Text, right column-->
 
             <div class="Column_1">
-                <h1>About</h1>
+                <h1>About Me</h1>
                 <p> 
-                    <br> Of course, as you may already know my name is Ramon, and I'm a software engineer out of Portland, Oregon. I enjoy building websites, as well as traveling and spending time with my family.
+                    <br> <div class="center">Hello! I'm Ramon, a full-stack web developer from Portland, Oregon.</div>
                     <br>
-                </p>
-                <p class="center">
+                    <br> I wrote my first Python programs when I was 12 years old, in middle school. From there I knew my future would be with computers and technology. After graduating from high school, I set my sights on becoming a full-stack developer.
+                    Aside from programming, I enjoy studying foreign languages, cooking, and traveling.
                     <br>
-                    <br> The following are my areas of expertise and training: 
-                    <br> HTML, CSS, JavaScript, SQL, and C#.
-                    <br>
-                    <br> I'd love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
-                </p>
+                    <div class="center">
+                        <br> Here's one of my favorite quotes:
+                        <br>
+                        <br>
+                        <q>
+                            We cannot solve our problems with the same thinking we used when we created them.
+                        </q>    
+                        <br> -Albert Einstein
+                        <br>
+                        <br> Take a look at my work and <a onclick="openForm()" class="contact">get in touch</a> if you'd like to work together!  
+                    </div>
             </div>
 
         </div>
@@ -149,7 +167,7 @@
             <!--GitHub Logo, right column-->
 
             <div class="Column_2">
-                <a href="https://github.com/ramvilsil" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+                <a href="https://github.com/ramvilsil" target="_blank"><img class="invertColor" src="images/Octicons-mark-github.svg.png" alt="GitHub Logo"></a>
             </div>
         </div>
 
@@ -159,13 +177,13 @@
         <!--Contact Section-->
 
         <div id="Contact">
-            <button onclick="openForm()" class="Pop_Up_Button">Contact</button>
+            <button onclick="openForm()" class="Pop_Up_Button">Contact Me</button>
             <div class="form-popup" id="myForm">
                 
 
                 <form action="" method="POST" class="form-container">
                     
-                    <h1>Contact</h1>
+                    <h1>Contact Me</h1>
 
 
                     <label for="name"><b>Name:</b></label>
