@@ -10,7 +10,7 @@
 } 
 
 #Slideshow {
-    margin-top: 10vh;
+    margin-top: 3vh;
 }
 
 
@@ -79,43 +79,97 @@ a:hover {
     height: 50vh;
 }
 
-.navbar {
+.navbar-right {
     overflow: hidden; 
-    background-color: black; 
     position: fixed;
     top: 0; 
     width: 100%; 
     z-index: 1;
-    text-align: center;
+    text-align: right;
+    background-color: #1B1B1B;
+    height: 8vh;
+
 }    
 
 /* Navbar links */
 
-.navbar a { 
+
+.navbar-right a { 
     color: white;
     text-decoration: none;
     font-size: 24px; 
-    padding: 10px;
-    margin-top: 2px;
+   
+    padding: 1.5vh;
+    margin-top: 0.8vh;
+    margin-left: 0.5vw;
+
     margin-bottom: 2px;
 
     /* Nav bar link spacing */
     margin-right: 2vw;
 
-    line-height: 1.5;
     display: inline-block;
     vertical-align: middle;
-    font-weight: 100;
-
-}
-
-.navbar a:hover {
-    background-color: whitesmoke; 
-    color: black; 
+    font-weight: bold;
     border-radius: 20px;
-    font-weight: 100;
 
 }
+
+.navbar-right a:hover {
+    background-color: #292929; 
+    border-radius: 20px;  
+
+}
+
+
+
+.navbar-left {
+    overflow: hidden; 
+    position: fixed;
+    top: 0; 
+    z-index: 1;
+    text-align: left;
+
+}    
+
+/* Navbar links */
+
+
+.navbar-left a { 
+    color: white;
+    text-decoration: none;
+    font-size: 24px; 
+   
+    padding: 1vh;
+    margin-top: 0.8vh;
+    margin-left: 0.5vw;
+
+    margin-bottom: 2px;
+
+    /* Nav bar link spacing */
+    margin-right: 2vw;
+
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    border-radius: 20px;
+
+}
+
+.navbar-left a:hover {
+    background-color: #292929; 
+    border-radius: 20px;    
+
+}
+
+.navbar-left img {
+    height: 4.5vh; 
+    float: left;
+}
+
+
+
+
 
 /* Home Section */
 
@@ -127,7 +181,17 @@ a:hover {
     
 }
 
-/*Slideshow */
+
+/* Changes the top margin of the home section to padding to that 
+when the Home button is clicked it brings the user back to the top of the page
+and not the to where the Home elements begin */
+#Home {
+    margin-top: 0;
+    padding-top: 30vh;
+}
+
+
+/*Slideshow styling */
 .slideshow-container {
     max-width: 40vw;
     position: relative;
@@ -155,7 +219,7 @@ a:hover {
     bottom: 8px;
     width: auto;
     text-align: center;
-    background-color: black;
+    background-color: #202020;
     border-radius: 10px;
     margin: 0.5vw;
 }
@@ -190,6 +254,7 @@ body {
 
 }
 
+
 .Row:after {
 	content: ""; 
     
@@ -210,7 +275,7 @@ body {
     max-width: 49vw;
     border-radius: 10px;
     padding: 25px; 
-    background-color: white; 
+    background-color: #1B1B1B; 
 }
 
 
@@ -218,7 +283,7 @@ body {
 .form-container input[type=text] {
     width: 100%; 
     padding: 12px; 
-    border: 1px solid lightgrey; 
+    border: 1px solid white; 
     border-radius: 4px; 
     box-sizing: border-box; 
     margin-top: 6px; 
@@ -227,9 +292,6 @@ body {
 }
 
 
-#Contact h1 {
-    color: black;
-}
 
 /* General button */
 button {
@@ -243,28 +305,37 @@ button {
 }
 
 /* Hover effects for contact and submit buttons */
-button:hover, .form-container .btn:hover {
+button:hover  {
     color: white; 
     background-color: black; 
     transition-duration: 1s; 
     -webkit-transition-duration: 1s; 
-    border-color: silver; 
+    border-color: white; 
 }
 
 /* Submit button */
 .form-container .btn {
-    background-color: white; 
-    color: black;
-    border-color: black;
+    background-color: #1B1B1B; 
+    color: white;
+    border-color: white;
     margin-bottom: 1vh; 
+}
+
+.form-container .btn:hover {
+    color: white; 
+    background-color: #008B06; 
+    transition-duration: 1s; 
+    -webkit-transition-duration: 1s; 
+    border-color: white; 
 }
 
 
 /* Close button */
 .form-container .cancel {
-    background-color: black;
+    background-color: #292929;
     color: white;
-    border-color: gray;
+    border-color: white;
+    border-width: 0.5vh;
 }
 
 /* Styling for close button on hover */
@@ -273,8 +344,8 @@ button:hover, .form-container .btn:hover {
     background-color: darkred;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
-    border-color: black;
-    box-shadow : 0 0 5px black inset; 
+    border-color: white;
+    box-shadow : 0 0 5px white inset; 
 
 }
 
@@ -284,13 +355,13 @@ button:hover, .form-container .btn:hover {
     bottom: 1.75vw;
     right: 1.75vw; 
     width: 25vw; 
-    background-color: white; 
-    color: black;
-    border: solid black; 
+    background-color: #1B1B1B; 
+    border: solid white; 
     cursor: pointer; 
     -webkit-animation: movePopup 3s; /* Animation for 5 seconds for Safari 4.0-8.0 */
     animation: movePopup 3s; /* Animation set for 3 seconds */
 }
+
 
 /* Moves the button from off the right side of the screen to its fixed location on the viewport */
 @keyframes movePopup {
