@@ -19,8 +19,3 @@ My first portfolio website, deployed with GitHub pages.
   - HTMl Styling 
 - JavaScript File
   - For animations
-
-<br>
-
-
-![image](https://user-images.githubusercontent.com/115331883/202902087-05caaf50-7096-41a2-a26e-2157421f1c15.png)
